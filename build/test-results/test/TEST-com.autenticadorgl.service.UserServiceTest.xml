@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.autenticadorgl.service.UserServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-11-18T12:43:36" hostname="DESKTOP-CHTDNRS" time="0.904">
+  <properties/>
+  <testcase name="testLoginUserSuccess()" classname="com.autenticadorgl.service.UserServiceTest" time="0.888"/>
+  <testcase name="testLoginUserErrorWrongPass()" classname="com.autenticadorgl.service.UserServiceTest" time="0.004"/>
+  <testcase name="testRegisterUserFailUserExists()" classname="com.autenticadorgl.service.UserServiceTest" time="0.002"/>
+  <testcase name="testRegisterUserSuccess()" classname="com.autenticadorgl.service.UserServiceTest" time="0.007"/>
+  <testcase name="testLoginUserErrorNotFoundEmail()" classname="com.autenticadorgl.service.UserServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

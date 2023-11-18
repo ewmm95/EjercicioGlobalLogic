@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.autenticadorgl.exception.GlobalExceptionHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-18T12:43:36" hostname="DESKTOP-CHTDNRS" time="0.001">
+  <properties/>
+  <testcase name="testHandleException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

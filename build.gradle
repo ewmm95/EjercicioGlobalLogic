@@ -1,0 +1,38 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.14'
+    id 'groovy'
+    id 'java'
+}
+
+group 'com.globallogic'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.springframework.boot:spring-boot-starter-test:2.5.14') {
+        exclude group: 'junit', module: 'junit'
+    }
+    runtimeOnly group: 'com.h2database', name: 'h2', version: '2.2.220'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.5.14'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.5.14'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.5.14'
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation 'org.springframework.boot:spring-boot-starter-security:2.5.14'
+    implementation 'com.auth0:java-jwt:3.10.3'
+
+
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+test {
+    useJUnitPlatform()
+}
