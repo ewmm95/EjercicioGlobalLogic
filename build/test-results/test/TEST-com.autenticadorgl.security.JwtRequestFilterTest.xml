@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.autenticadorgl.security.JwtRequestFilterTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-11-19T17:02:29" hostname="DESKTOP-CHTDNRS" time="0.459">
+  <properties/>
+  <testcase name="testValidTokenAuthentication()" classname="com.autenticadorgl.security.JwtRequestFilterTest" time="0.434"/>
+  <testcase name="testAbsentTokenFilterChain()" classname="com.autenticadorgl.security.JwtRequestFilterTest" time="0.02"/>
+  <testcase name="testInvalidTokenErrorResponse()" classname="com.autenticadorgl.security.JwtRequestFilterTest" time="0.005"/>
+  <system-out><![CDATA[2023-11-19 14:02:29 | Token no valido
+2023-11-19 14:02:29 | No autorizado
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,6 @@
+handleException
+$java.lang.Exception: Error general
+handleAccessDeniedException
+	!handleUsernameNotFoundException
+'2023-11-19 14:02:29 | Token no valido
+%2023-11-19 14:02:29 | No autorizado

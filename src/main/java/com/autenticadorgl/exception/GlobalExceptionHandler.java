@@ -78,7 +78,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(JWTDecodeException.class)
-    public ResponseEntity<Object> handleJWTDecodeException(JWTDecodeException ex) {
+    public ResponseEntity<ErrorResponseDTO> handleJWTDecodeException(JWTDecodeException ex) {
         ErrorResponseDTO errorResponse = new ErrorResponseDTO();
         ErrorDetailDTO errorDetail = new ErrorDetailDTO(
                 LocalDateTime.now(),
@@ -90,7 +90,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(TokenExpiredException.class)
-    public ResponseEntity<Object> handleTokenExpiredException(TokenExpiredException ex) {
+    public ResponseEntity<ErrorResponseDTO> handleTokenExpiredException(TokenExpiredException ex) {
         ErrorResponseDTO errorResponse = new ErrorResponseDTO();
         ErrorDetailDTO errorDetail = new ErrorDetailDTO(
                 LocalDateTime.now(),
@@ -102,7 +102,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(NoSuchElementException.class)
-    public ResponseEntity<Object> handleNoSuchElementException(NoSuchElementException e) {
+    public ResponseEntity<ErrorResponseDTO> handleNoSuchElementException(NoSuchElementException e) {
         ErrorResponseDTO errorResponse = new ErrorResponseDTO();
         ErrorDetailDTO errorDetail = new ErrorDetailDTO(
                 LocalDateTime.now(),
