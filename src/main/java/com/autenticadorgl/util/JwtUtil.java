@@ -13,8 +13,7 @@ import java.util.Date;
 public class JwtUtil {
 
     private String secret = "aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQ==";
-    //private int rango = (1000 * 60 * 60) * 2; // 2 horas en milisegundos
-    private int rango = 1000 * 30; // 2 horas en milisegundos
+    private int rango = (1000 * 60 * 60) * 2; // 2 horas en milisegundos
 
     public String generateToken(String email) {
         return JWT.create()

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.autenticadorgl.exception.GlobalExceptionHandlerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-11-19T17:02:28" hostname="DESKTOP-CHTDNRS" time="0.56">
+<testsuite name="com.autenticadorgl.exception.GlobalExceptionHandlerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-11-20T02:23:39" hostname="DESKTOP-CHTDNRS" time="0.716">
   <properties/>
-  <testcase name="testHandleException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.549"/>
-  <testcase name="testHandleTokenExpiredException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.002"/>
+  <testcase name="testHandleException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.701"/>
+  <testcase name="testHandleTokenExpiredException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.003"/>
   <testcase name="testHandleNoSuchElementException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.001"/>
   <testcase name="testHandleAccessDeniedException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.002"/>
-  <testcase name="testHandleJWTDecodeException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.002"/>
-  <testcase name="testHandleUsernameNotFoundException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.002"/>
+  <testcase name="testHandleJWTDecodeException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.003"/>
+  <testcase name="testHandleUsernameNotFoundException()" classname="com.autenticadorgl.exception.GlobalExceptionHandlerTest" time="0.003"/>
   <system-out><![CDATA[handleException
 java.lang.Exception: Error general
 handleAccessDeniedException
