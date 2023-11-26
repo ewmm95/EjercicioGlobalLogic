@@ -47,11 +47,6 @@ public class UserServiceTest {
     @InjectMocks
     private UserServiceImpl userService;
 
-    @BeforeEach
-    public void setup(){
-
-    }
-
     @Test
     public void testRegisterUserSuccess() throws Exception {
         String password = "secret";
@@ -163,6 +158,31 @@ public class UserServiceTest {
         assertThrows(UserException.class, () -> {
             userService.loginUser(newUser);
         });
+    }
+
+    @Test
+    public void testGetPhones() throws Exception {
+        String password = "secret";
+        String email = "asd@secret.cl";
+
+        UserDTO newUser = new UserDTO();
+        newUser.setPassword(password);
+        newUser.setEmail(email);
+
+        List<PhoneDTO> phones = new ArrayList<PhoneDTO>();
+        phones.add(new PhoneDTO(1, 1, "asd"));
+        phones.add(new PhoneDTO(1, 2, "asd"));
+        phones.add(new PhoneDTO(1, 3, "asd"));
+        newUser.setPhones(phones);
+
+        when(userRepository.findByEmail(newUser.getEmail()))
+                .thenReturn(Optional.of(new UserEntity()));
+
+        when(parseUtil.userEntityToUserDTO(any()))
+                .thenReturn(newUser);
+
+        List<PhoneDTO> response = userService.getPhones(email);
+        assertEquals(response, phones);
     }
 
 }

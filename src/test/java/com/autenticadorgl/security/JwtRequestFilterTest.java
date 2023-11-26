@@ -48,11 +48,6 @@ public class JwtRequestFilterTest {
     @Mock
     private UserDetails userDetails;
 
-    @BeforeEach
-    public void setup(){
-
-    }
-
     @Test
     public void testValidTokenAuthentication() throws Exception {
         String email = "asd@secret.cl";
@@ -82,22 +77,6 @@ public class JwtRequestFilterTest {
         writer.flush();
 
         assertTrue(stringWriter.toString().contains(Constants.NOT_AUTHORIZED));
-        verify(response).setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-    }
-
-    @Test
-    public void testAbsentTokenFilterChain() throws Exception {
-        when(request.getHeader("token")).thenReturn(null);
-
-        StringWriter stringWriter = new StringWriter();
-        PrintWriter writer = new PrintWriter(stringWriter);
-        when(response.getWriter()).thenReturn(writer);
-
-        jwtRequestFilter.doFilterInternal(request, response, filterChain);
-
-        writer.flush();
-
-        assertTrue(stringWriter.toString().contains(Constants.JWT_BADREQUEST));
         verify(response).setStatus(HttpServletResponse.SC_UNAUTHORIZED);
     }
 

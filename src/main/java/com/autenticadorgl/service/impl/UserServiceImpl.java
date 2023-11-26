@@ -70,7 +70,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<PhoneDTO> getPhones(String email) throws Exception {
         Optional<UserEntity> userEntity = userRepository.findByEmail(email);
-        if(!Objects.nonNull(userEntity)) throw new UserException(409, Constants.EMAIL_NOTFOUND);
+        if(userEntity.isEmpty()) throw new UserException(409, Constants.EMAIL_NOTFOUND);
         return parseUtil.userEntityToUserDTO(userEntity.get()).getPhones();
     }
 
